@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Task Name</th>
+      <th>Activity</th>
+      <th>Start</th>
+      <th>Finish</th>
+      <th>PGMA</th>
+      <th>System</th>
+    </tr>
+
+
+    {% for t in talcherdb %}
+    <tr>
+      <td>{{t.id}}</td>
+      <td>{{t.name}}</td>
+      <td>{{t.activity}}</td>
+      <td>{{t.start}}</td>
+      <td>{{t.finish}}</td>
+      <td>{{t.pgma}}</td>
+      <td>{{t.system}}</td>
+    </tr>
+
+    {% endfor %}
+
+
+
+  </table>
+
+
+</div>
+
+
+
+{% endblock body %}
